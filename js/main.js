@@ -37,7 +37,7 @@ boton_anterior.addEventListener('click', anterior);
 
 import { user_ob } from "./user.js";
 function ver(){
-    root.innerHTML = '<ul>' + 
+    root.innerHTML = '<ul id="lista_usuarios">' + 
                         '<li>' + user_ob[usuario].id + '</li>' + 
                         '<li>' + user_ob[usuario].nickname + '</li>' + 
                         '<li>' + user_ob[usuario].name + '</li>' + 
