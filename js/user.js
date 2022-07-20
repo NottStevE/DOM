@@ -1,4 +1,4 @@
-let user = [
+export let user_ob = [
     {   id:100, 
         nickname: 'anna0', 
         password: 'white00',
@@ -64,5 +64,3 @@ let user = [
         phone: 4568443548
     }
 ];
-
-console.log(user);

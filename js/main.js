@@ -11,8 +11,11 @@ let user = [
 let caja_texto = document.getElementById("titulo");
 let boton_siguiente = document.getElementById("boton2");
 let boton_anterior = document.getElementById("boton");
+let boton_ver = document.getElementById("boton_ver")
 
+let root = document.getElementById("root");
 let usuario = 0;
+caja_texto.innerHTML = user[usuario][1];
 
 function siguiente(){
     if(usuario <= 5){
@@ -27,6 +30,20 @@ function anterior(){
     }
 }
 
-
 boton_siguiente.addEventListener('click', siguiente);
 boton_anterior.addEventListener('click', anterior);
+
+// ---------------DOM del root----------------
+
+import { user_ob } from "./user.js";
+function ver(){
+    root.innerHTML = '<ul>' + 
+                        '<li>' + user_ob[usuario].id + '</li>' + 
+                        '<li>' + user_ob[usuario].nickname + '</li>' + 
+                        '<li>' + user_ob[usuario].name + '</li>' + 
+                        '<li>' + user_ob[usuario].address + '</li>' + 
+                        '<li>' + user_ob[usuario].email + '</li>' + 
+                        '<li>' + user_ob[usuario].phone + '</li>' + 
+                    '</ul>';
+}
+boton_ver.addEventListener('click', ver)
